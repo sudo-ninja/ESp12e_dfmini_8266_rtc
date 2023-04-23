@@ -268,6 +268,7 @@ main{
       </div>
     <section>
         <div class="hymns-button">
+          <!-- &#39; text&#39; means 'text' ( put single quote ) -->
             
 <button onclick="PlayHymn(&#39;entrance&#39;)">Play entrance hymn
     <span></span>
@@ -337,12 +338,13 @@ main{
 </div>
 </main>
 
+<!-- XMLHTTPrequest is AJAX call to load data on same page -->
 <script>
 var xhttp = new XMLHttpRequest();
-
 //document.querySelector("#vol").innerHTML=range;
 function PlayHymn(hymn){
 var volume = document.getElementById("volume").value;
+<!-- here form data is sent using below three lines -->
 xhttp.open("POST","input", true);
 xhttp.setRequestHeader("Content-type", "text/plain");
 xhttp.send(hymn);
@@ -350,10 +352,6 @@ console.log(hymn);
 console.log("request successful");
 document.querySelector("#vol").innerHTML=volume;
 }
-
-
-
-
 </script>
 
 </body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

@@ -110,7 +110,7 @@ public:
 #endif
 
 // declared here SSID to be shown to user at wifi page
-String ssid = "E-hymn";
+String ssid = "Jenix-School-Bell";
 String password = "";
 
 const byte DNS_PORT = 53;
@@ -354,8 +354,8 @@ void setup() {
     deserializeJson(hymns, hymn_numbers);  // convert the string to json object
     file.close();
   }
-//default 
-  ssid = (hymns.containsKey("ssid")) ? hymns["ssid"] + "_E-hymn" : "E-hymn";
+//default AP settings
+  ssid = (hymns.containsKey("ssid")) ? hymns["ssid"] + "_Jenix" : "Jenix-School-Bell";
   password = (hymns.containsKey("pass")) ? hymns["pass"]+"" : "12345678";
   
   debugln(ssid);

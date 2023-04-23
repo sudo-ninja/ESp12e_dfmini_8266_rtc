@@ -1,66 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>E-hymn</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>E-hymn</title>
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="pius.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="pius.png" type="image/x-icon">
   <style>
-
   </style>
-</head>
+  </head>
+
 <body>
   <main>
-
-
-
     <section> 
       <div class="header">
         <img src="/pius.png" href="#default" class="logo"></img>
-        <div class="header-right">
-          <a class="active" href="/">Home</a>
-          <a  href="inputs.html">Controls</a>
-          <a href="changedetails.html">Change password</a>
-        </div>
+            <div class="header-right">
+              <a class="active" href="/">Home</a>
+              <a  href="inputs.html">Controls</a>
+              <a href="changedetails.html">Change password</a>
+            </div>
       </div>
 
       <header>
-<h1>E-hymn</h1>
-
-</header>
-<div class="spacer"></div> 
+          <h1>E-hymn</h1>
+      </header>
+      <div class="spacer"></div> 
 
       <div id="users">
-        <input class="search"  placeholder="Search for hymns here"  />
-       
+        <input class="search"  placeholder="Search for tune file here"  />       
         <ul class="list inactive"></ul>
       </div>
+
       <div class="spacer"></div>
-  <form action="/hymns" method="post" >
-    <div class="form-inputs">
-    <input name="entrance" placeholder="entrance hymn number" />
-    
-    <input name="offertory" placeholder="offertory hymn number" />
-   
-    <input name="communion" placeholder="communion hymn number" />
-   
-    <input name="closing" placeholder="closing hymn number" />
-    
-  </div>
-    <button type="submit" >Submit</button>
-  
-  </form>
-  <br>
- 
-      
-      
+
+      <form action="/hymns" method="post" >
+          <div class="form-inputs">
+                <input name="entrance" placeholder="entrance hymn number" />
+                
+                <input name="offertory" placeholder="offertory hymn number" />
+              
+                <input name="communion" placeholder="communion hymn number" />
+              
+                <input name="closing" placeholder="closing hymn number" />  
+                  <!-- here make 5 inputs 1. PS (period schedule number max allowed 10), 2. Period (period number, P01 to P24 ) ->
+                  <!-- max period allowed 24 only , 3. Start time (this should be in HH:MM 24 hr formate , 
+                    4. Tune Number (this tune number from tune DB and Already make display on this page)  -->
+
+                    <!--  one more form will be created which 
+                    will use to assign PS period schedule to Weekdays
+                    input selector from week day 
+                    input field with PS, max PS assigned to per day 3 -->
+          </div>
+
+        <button type="submit" >Submit</button>
+
+      </form>
+        <br>        
     </section>
   </main>
 
-    <script src="list.min.js"></script>
-  <script  src="index.js"></script>
+  <script src="list.min.js"></script>
+  <!-- LIST.MIN.JS IS standard file to main tain html search  -->
+  <script  src="index.js"></script> 
 </body>
 </html>
